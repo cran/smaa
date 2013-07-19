@@ -1,5 +1,6 @@
-df1ef1acac0f6befd299d2406d8660c7 *DESCRIPTION
+817814b26e8b8069996385726d45d69c *DESCRIPTION
 9aebb296a93254c237d96add354a01c7 *NAMESPACE
+bb90f463c0bfbfc89e2138c58490e6e2 *NEWS
 36484a86cb2617b247cb5454ed1eec95 *R/smaa.R
 4e473f4f8057b2010796570fca1cf97b *inst/extdata/thrombo-meas.txt.gz
 d7c5f2b19eeb0e84e5d4e3e023941d48 *inst/extdata/thrombo-ranks-nopref.txt.gz
@@ -13,6 +14,6 @@ b58e2efb733d7f071dc474d428c7fccc *man/smaa.cw.Rd
 f72f6c1987e97082735cac71ff482527 *man/smaa.ra.Rd
 68b45c5212f7e50ca2f89521ea30d5a9 *man/smaa.ranks.Rd
 62fb1f8e3fcae9f914213191b652a9fd *man/smaa.values.Rd
-476f3a11a494c0a5cad9a539cd69f031 *src/Makevars
+2daba247821abb72c29dea053247f50c *src/Makevars
 9bc36be6132f088cd0b0898ffc8f4393 *src/smaa.c
 7ca3c7d3376b820d9d576f391302ed19 *tests/Examples/smaa-Ex.Rout.save
