@@ -1,3 +1,14 @@
+smaa 0.2
+==========
+
+ * Add convenience method to efficiently calculate piece-wise linear partial
+   value functions.
+
+ * Fix central weights in case alternative obtains first rank in exactly one
+   iteration.
+
+ * Fix confidence factors when central weights are NA
+
 smaa 0.1-1
 ==========
 

@@ -64,13 +64,13 @@ print.smaa.ra <- function(x, ...) {
 
 smaa.cw <- function(ranks, pref) {
   N <- dim(ranks)[1]
-  m <- dim(ranks)[2]
   n <- dim(pref)[2]
   stopifnot(identical(dim(pref), c(N, n)))
 
   cw <- t(apply(ranks, 2, function(r) {
-    apply(pref[r == 1, ], 2, mean)
+    apply(pref[r == 1, , drop = FALSE], 2, mean)
   }))
+  cw[is.nan(cw)] <- NA
   attr(cw, "smaa.N") <- N
   class(cw) <- "smaa.cw"
   cw
@@ -82,7 +82,7 @@ plot.smaa.cw <- function(x, ...) {
   plot(NA, xlim=c(1, ncol(x)), ylim=c(0, max(x)), xlab="", ylab="Weight", xaxt='n', bty='L',
     main='Central weights', ...)
   for (i in 1:nrow(x)) {
-    lines(x[i,], pch=i, type="b")
+    lines(x[i, , drop=TRUE], pch=i, type="b")
   }
   axis(side=1, at=1:ncol(x), labels=colnames(x), las=2)
 
@@ -120,7 +120,7 @@ smaa.cf <- function(meas, cw) {
     if (all(!is.na(w))) {
       smaa.ra(smaa.ranks(smaa.values(meas, w)))[,1]
     } else {
-      NA
+      rep(NA, m)
     }
   }))
 
@@ -180,4 +180,28 @@ print.smaa.result <- function(x, ...) {
 
 plot.smaa.result <- function(x, ...) {
   plot(x$ra, ...)
+}
+
+smaa.pvf <- function(x, cutoffs, values, outOfBounds="error") {
+  stopifnot(length(cutoffs) == length(values))
+  stopifnot(outOfBounds %in% c("error", "clip", "interpolate"))
+  n <- length(cutoffs)
+  N <- length(x)
+
+  v <- .C("smaa_pvf",
+    as.double(x), as.integer(N),
+    as.double(cutoffs), as.double(values), as.integer(n),
+    v=vector(mode="double", length=N))$v
+
+  clip <- function(v) {
+    w <- v
+    w[v < 0] <- 0
+    w[v > 1] <- 1
+    w
+  }
+
+  switch(outOfBounds,
+         error=(function(v) { stopifnot(all(v >= 0) && all(v <= 1)); v })(v),
+         clip=clip(v),
+         interpolate=v)
 }
