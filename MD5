@@ -1,7 +1,7 @@
-671dd39b5458858a53a3651d092dafea *DESCRIPTION
+99dbc398c3f654e65eecb2aef0393100 *DESCRIPTION
 153c6cdf6010d9d0784783117932f4f8 *NAMESPACE
-5b26827016798736e799d3cc0ea86e0b *NEWS
-2a098b247814725abb1ffaab447b7c01 *R/smaa.R
+117b3cafc68b3464c1104e89a8bc954c *NEWS
+d1b3c3354ddc1a20aa2424d33bf58f2c *R/smaa.R
 4e473f4f8057b2010796570fca1cf97b *inst/extdata/thrombo-meas.txt.gz
 d7c5f2b19eeb0e84e5d4e3e023941d48 *inst/extdata/thrombo-ranks-nopref.txt.gz
 44a3491301aa5f484222d21831997e75 *inst/extdata/thrombo-values-nopref.txt.gz
@@ -15,9 +15,12 @@ b58e2efb733d7f071dc474d428c7fccc *man/smaa.cw.Rd
 f72f6c1987e97082735cac71ff482527 *man/smaa.ra.Rd
 68b45c5212f7e50ca2f89521ea30d5a9 *man/smaa.ranks.Rd
 a740eaea71030a8e66a35e4a17d4fd6f *man/smaa.values.Rd
-4442921d6d5f1e7504fe140ece424ff8 *src/Makevars
+8a41e7f9ea7036a7572ac0b64c9b0dfd *src/Makevars
+321cf480807a74c1e24baa7ba0a21f68 *src/entropyRanking.c
 78b204044f770e2acc39b0558ac17ec9 *src/pvf.c
 9bc36be6132f088cd0b0898ffc8f4393 *src/smaa.c
 6554e23e67709efb92029e228c41eb3b *tests/Examples/smaa-Ex.Rout.save
-18497af7311f93d08d6a766cfc239396 *tests/nacw.R
+222e6e8516a4f0042bb78e40f04ab556 *tests/nacw.R
 a99ba4e3d2547601e0369cddb510a1d4 *tests/pvf.R
+4e4980f04bd1f04d8ad921726591b61b *tests/rankEntropy.R
+456a19c1238c2f40c9cbcbc3605dbf65 *tests/rankEntropy.txt

@@ -97,8 +97,14 @@ print.smaa.cw <- function(x, ...) {
 
 smaa.entropy.ranking <- function(ranks, p0=1) {
   N <- dim(ranks)[1]
+  m <- dim(ranks)[2]
 
-  p <- rle(sort(apply(ranks, 1, paste, collapse=".")))$lengths / N * p0
+	counts <- .C("smaa_countRankings", as.integer(t(ranks)),
+	  as.integer(N), as.integer(m),
+	  counts=as.integer(rep(0, N)),
+	  NAOK=FALSE, DUP=FALSE)$counts
+
+  p <- counts[counts > 0] / N * p0
   -sum(p * log2(p))
 }
 
@@ -107,6 +113,7 @@ smaa.entropy.choice <- function(ra, p0=1) {
   stopifnot(class(ra) == 'smaa.ra')
 
   p <- ra[, 1] * p0 # first-rank acceptabilities
+  p <- p[p > 0]
   -sum(p * log2(p))
 }
 
@@ -123,6 +130,7 @@ smaa.cf <- function(meas, cw) {
       rep(NA, m)
     }
   }))
+  names(cf) <- rownames(cw)
 
   result <- list(cf=cf, cw=cw)
   attr(result, "smaa.N") <- N
