@@ -1,6 +1,6 @@
-99dbc398c3f654e65eecb2aef0393100 *DESCRIPTION
+faaacee55f476324e1d5d0b236cec7ea *DESCRIPTION
 153c6cdf6010d9d0784783117932f4f8 *NAMESPACE
-117b3cafc68b3464c1104e89a8bc954c *NEWS
+861730a322c2db21a5e47269024df48e *NEWS
 d1b3c3354ddc1a20aa2424d33bf58f2c *R/smaa.R
 4e473f4f8057b2010796570fca1cf97b *inst/extdata/thrombo-meas.txt.gz
 d7c5f2b19eeb0e84e5d4e3e023941d48 *inst/extdata/thrombo-ranks-nopref.txt.gz
@@ -18,7 +18,7 @@ a740eaea71030a8e66a35e4a17d4fd6f *man/smaa.values.Rd
 8a41e7f9ea7036a7572ac0b64c9b0dfd *src/Makevars
 321cf480807a74c1e24baa7ba0a21f68 *src/entropyRanking.c
 78b204044f770e2acc39b0558ac17ec9 *src/pvf.c
-9bc36be6132f088cd0b0898ffc8f4393 *src/smaa.c
+734dc0a815f7dedc5935a56cb616e75b *src/smaa.c
 6554e23e67709efb92029e228c41eb3b *tests/Examples/smaa-Ex.Rout.save
 222e6e8516a4f0042bb78e40f04ab556 *tests/nacw.R
 a99ba4e3d2547601e0369cddb510a1d4 *tests/pvf.R
