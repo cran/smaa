@@ -1,8 +1,8 @@
-3890e8030870acaac8315fbb1c2fd17d *DESCRIPTION
+1079bb1bd187f0db55ca09e55a8412fe *DESCRIPTION
 6dae3937c81ee3e148fae6e4e1c821a5 *NAMESPACE
-1367d01fe5a73be0687553e03b06fda2 *NEWS
-89b2cae4208f0e04275f26cc66b821c3 *R/smaa.R
-52968cfb2cf005fb6bb7faabbe6cd90a *build/partial.rdb
+1367d01fe5a73be0687553e03b06fda2 *NEWS.md
+d7ecb6f61fc218fdc58fca3b41c238f0 *R/smaa.R
+a5c2f0939ddeccbd34dcd04c9a0bd870 *build/partial.rdb
 4e473f4f8057b2010796570fca1cf97b *inst/extdata/thrombo-meas.txt.gz
 d7c5f2b19eeb0e84e5d4e3e023941d48 *inst/extdata/thrombo-ranks-nopref.txt.gz
 44a3491301aa5f484222d21831997e75 *inst/extdata/thrombo-values-nopref.txt.gz
