@@ -1,6 +1,6 @@
 Package: smaa
-Version: 0.3-2
-Date: 2023-04-24
+Version: 0.3-3
+Date: 2024-09-05
 Title: Stochastic Multi-Criteria Acceptability Analysis
 Authors@R: c(
   person("Gert", "van Valkenhoef", email="gert@gertvv.nl", role=c("aut", "cre", "cph")))
@@ -11,8 +11,8 @@ Description: Implementation of the Stochastic Multi-Criteria Acceptability Analy
 URL: https://github.com/gertvv/rsmaa
 License: GPL-3
 NeedsCompilation: yes
-Packaged: 2023-04-27 18:49:24 UTC; gert
+Packaged: 2024-09-05 18:11:06 UTC; gert
 Author: Gert van Valkenhoef [aut, cre, cph]
 Maintainer: Gert van Valkenhoef <gert@gertvv.nl>
 Repository: CRAN
-Date/Publication: 2023-04-28 16:20:03 UTC
+Date/Publication: 2024-09-06 14:40:02 UTC
